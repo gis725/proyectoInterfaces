@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CIFP Blablbla</title>
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+               
+               display: grid;
+               grid-template-areas: "header""login""informacion""footer";
+               grid-template-rows: auto 1fr 3fr auto;
+           }
+
+        
+
+        header {
+            background-color: lightgoldenrodyellow;
+            grid-area: header;
+        }
+
+        section:nth-of-type(1) {
+            grid-area: login;
+            background-color: cornflowerblue;
+        }
+
+        section:nth-of-type(2) {
+            grid-area: informacion;
+            background-color: azure;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .menu {
+            background-image: url(barra.svg);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            height: 50px;
+            width: 50px;
+            padding: 1em;
+
+
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        li a {
+            background-color: beige;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li a:hover {
+            background-color: burlywood;
+            color: beige
+        }
+
+        .ver {
+            display: flex;
+
+        }
+
+
+
+        @media (min-width: 600px) {
+            #menu {
+                display: none;
+            }
+
+            header ul {
+                flex-direction: row;
+            }
+
+            header li {
+                flex-grow: 1;
+            }
+
+          
+            body {
+           
+           grid-template-areas: "header header" "informacion  login" "footer footer";
+           grid-template-columns: 3fr 1fr;
+           grid-template-rows: auto 1fr auto;
+       }
+
+
+
+        }
+
+
+        .ver {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#"> <img src="logo.jpg" />
+
+                </a>
+                <button class="menu" id="menu">
+                </button></div>
+            <ul class="ocultar" id="lista">
+                <li> <a href="#">entrada</a> </li>
+                <li><a href="#">salida</a></li>
+                <li><a href="#">centro</a></li>
+                <li><a href="#">derecha</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section>
+
+        <h2>Login</h2>
+
+
+        
+
+        <form>
+
+            <label >correo<input type="email"></label>
+            <label >contraseña<input type="contraseña"></label>
+            
+            <input type= "submit">
+        </form>
+    </section>
+
+    <section>
+        <h2>informacion</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+
+    </section>
+
+
+    <footer><small>juan de colonia</small>
+
+    </footer>
+    <script>
+        var mq = window.matchMedia("(min-width:600px)");
+
+        function screenTest(e) {
+
+            var lista = document.getElementById("lista");
+            if (e.matches) {
+                lista.className = "mostrar";
+            } else {
+                lista.className = "ocultar";
+            }
+        }
+        mq.addListener(screenTest);
+
+
+        document.querySelector(".menu").addEventListener("click", menu);
+
+        function menu() {
+
+            var lista = document.querySelector("ul");
+            if (lista.className == "ocultar" || lista.className == "ver") {
+                lista.className = "mostrar";
+            } else {
+                lista.className = "ocultar";
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
