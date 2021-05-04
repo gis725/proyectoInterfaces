@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> CIFP Blablbla</title>
+    <title> CIFP Margarita Salas</title>
 
 
     <style>
@@ -14,36 +14,40 @@
             padding: 0;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
         }
 
         body {
-               
-               display: grid;
-               grid-template-areas: "header""login""informacion""footer";
-               grid-template-rows: auto 1fr 3fr auto;
-           }
 
-        
+            display: grid;
+            grid-template-areas: "header""login""informacion""footer";
+            grid-template-rows: auto 1fr 3fr auto;
+            color: #301D1E;
+        }
+
+
 
         header {
-            background-color: lightgoldenrodyellow;
+            background-color:#FF0000;
             grid-area: header;
+
         }
 
         section:nth-of-type(1) {
             grid-area: login;
-            background-color: cornflowerblue;
+            background-color:#f46;
         }
 
         section:nth-of-type(2) {
             grid-area: informacion;
-            background-color: azure;
+            background-color:#FFFEFE;
         }
 
         footer {
             grid-area: footer;
+            background-color:#FF0000;
         }
 
         .menu {
@@ -61,6 +65,11 @@
             height: 50px;
             width: 50px;
         }
+
+        section img {
+            height: auto;
+            width: auto;
+        }/*solo para la pagina de inicio*/
 
         a {
             text-decoration: none;
@@ -83,7 +92,7 @@
 
 
         li a {
-            background-color: beige;
+            background-color: #DB9396;
             height: 30px;
             display: flex;
             align-items: center;
@@ -91,8 +100,8 @@
         }
 
         li a:hover {
-            background-color: burlywood;
-            color: beige
+            background-color: #f45;
+            color: white;
         }
 
         .ver {
@@ -115,13 +124,13 @@
                 flex-grow: 1;
             }
 
-          
+
             body {
-           
-           grid-template-areas: "header header" "informacion  login" "footer footer";
-           grid-template-columns: 3fr 1fr;
-           grid-template-rows: auto 1fr auto;
-       }
+
+                grid-template-areas: "header header""informacion  login""footer footer";
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: auto 1fr auto;
+            }
 
 
 
@@ -138,11 +147,13 @@
     <header>
         <nav>
             <div>
-                <a href="#"> <img src="logo.jpg" />
+                <a href="#"> <img src="CIFP-Margarita salas.png" />
 
                 </a>
+                <h1>CIFP Margarita salas</h1>
                 <button class="menu" id="menu">
-                </button></div>
+                </button>
+            </div>
             <ul class="ocultar" id="lista">
                 <li> <a href="#">entrada</a> </li>
                 <li><a href="#">salida</a></li>
@@ -158,25 +169,27 @@
         <h2>Login</h2>
 
 
-        
+
 
         <form>
 
-            <label >correo<input type="email"></label>
-            <label >contraseña<input type="contraseña"></label>
-            
-            <input type= "submit">
+            <label>correo<input type="email"></label>
+            <label>contraseña<input type="contraseña"></label>
+
+            <input type="submit">
         </form>
     </section>
 
     <section>
-        <h2>informacion</h2>
-        <p>Lorem ipsum dolor sit amet</p>
-
+        <h2>Nuestro Centro</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione perferendis iusto porro hic
+            necessitatibus expedita distinctio, officiis pariatur iste, eveniet dolores, minus sed quae explicabo fuga
+            quaerat molestiae aliquam.</p>
+        <img src="colegio.jpg" />
     </section>
 
 
-    <footer><small>juan de colonia</small>
+    <footer><small>Calle Quimicas ilustres 30 09007 Burgos</small>
 
     </footer>
     <script>
