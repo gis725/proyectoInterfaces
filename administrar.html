@@ -9,8 +9,7 @@
 
 
     <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
         * {
             margin: 0px;
@@ -34,24 +33,24 @@
 
 
         header {
-            background-color:#FF0000;
+            background-color: #FF0000;
             grid-area: header;
 
         }
 
         section:nth-of-type(1) {
             grid-area: login;
-            background-color:#f46;
+            background-color: #f46;
         }
 
         section:nth-of-type(2) {
             grid-area: informacion;
-            background-color:#FFFEFE;
+            background-color: #FFFEFE;
         }
 
         footer {
             grid-area: footer;
-            background-color:#FF0000;
+            background-color: #FF0000;
         }
 
         .menu {
@@ -70,10 +69,7 @@
             width: 50px;
         }
 
-        section img {
-            height: auto;
-            width: auto;
-        }/*solo para la pagina de inicio*/
+
 
         a {
             text-decoration: none;
@@ -132,7 +128,7 @@
             body {
 
                 grid-template-areas: "header header""informacion  login""footer footer";
-                grid-template-columns: 3fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto 1fr auto;
             }
 
@@ -158,39 +154,61 @@
                 <button class="menu" id="menu">
                 </button>
             </div>
-    
             <ul class="ocultar" id="lista">
                 <li> <a href="#">entrada</a> </li>
                 <li><a href="#">salida</a></li>
                 <li><a href="#">centro</a></li>
                 <li><a href="#">derecha</a></li>
             </ul>
+
         </nav>
     </header>
 
     <section>
 
-        <h2>Login</h2>
+        <form>
+            <h2>Registro profesores</h2>
+
+            <ul>
+                <li>
+                    <label for="nprofesor">Nombre:<input type="text" name="profesor" id="nprofesor"></label></li>
+                <li><label for="ape1profesor">Apellido1º:<input type="text" name="profesor" id="ape1profesor"></label>
+                </li>
+                <li> <label for="ape2profesor">Apellido2º:<input type="text" name="profesor" id="ape2profesor"></label>
+                </li>
+                <li> <label for="asignaturas">Módulos<input type="text" name="profesor" id="modulos"></label></li>
 
 
 
-
-        <form action="administrar.html">
-
-            <label>correo<input type="email"></label>
-            <label>contraseña<input type="contraseña"></label>
+            </ul>
 
             <input type="submit">
         </form>
     </section>
 
     <section>
-        <h2>Nuestro Centro</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione perferendis iusto porro hic
-            necessitatibus expedita distinctio, officiis pariatur iste, eveniet dolores, minus sed quae explicabo fuga
-            quaerat molestiae aliquam.</p>
-        <img src="colegio.jpg" />
+        <form>
+            <form>
+                <h2>Registro profesores</h2>
+    
+                <ul>
+                    <li>
+                        <label for="nprofesor">Nombre:<input type="text" name="profesor" id="nprofesor"></label></li>
+                    <li><label for="ape1profesor">Apellido1º:<input type="text" name="profesor" id="ape1profesor"></label>
+                    </li>
+                    <li> <label for="ape2profesor">Apellido2º:<input type="text" name="profesor" id="ape2profesor"></label>
+                    </li>
+                    <li> <label for="asignaturas">Módulos<input type="text" name="profesor" id="modulos"></label></li>
+    
+    
+    
+                </ul>
+    
+                <input type="submit">
+            </form>
+        </form>
     </section>
+
 
 
     <footer><small>Calle Quimicas ilustres 30 09007 Burgos</small>
